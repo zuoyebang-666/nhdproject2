@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Reform in America - School Project</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #8B0000;
+            --accent: #F4C430;
+            --light: #f4f4f4;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 5px 0 0; font-style: italic; opacity: 0.9; }
+
+        nav {
+            background-color: #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav button:hover { background-color: var(--secondary); }
+        nav button.active { background-color: var(--accent); color: var(--primary); }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 600px;
+        }
+
+        .page-content { display: none; animation: fadeIn 0.5s; }
+        .page-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+        h3 { color: var(--secondary); margin-top: 30px; }
+        p { margin-bottom: 20px; text-align: justify; }
+
+        .img-container { margin: 30px 0; text-align: center; }
+        .img-container img {
+            max-width: 100%;
+            max-height: 500px;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 8px;
+            box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+        }
+        .caption { font-size: 0.9rem; font-style: italic; color: #666; margin-top: 10px; }
+
+        .bib-section { margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
+        .bib-entry { margin-bottom: 12px; font-size: 0.95rem; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #aaa;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Digital Reform in America</h1>
+        <p>Revolution • Reaction • Reform</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('home')" class="nav-btn active" id="btn-home">Home</button>
+        <button onclick="showPage('revolution')" class="nav-btn" id="btn-revolution">Revolution</button>
+        <button onclick="showPage('reaction')" class="nav-btn" id="btn-reaction">Reaction</button>
+        <button onclick="showPage('reform')" class="nav-btn" id="btn-reform">Reform</button>
+        <button onclick="showPage('bib')" class="nav-btn" id="btn-bib">Bibliography</button>
+    </nav>
+
+    <main>
+
+        <div id="home" class="page-content active">
+            <h2>Introduction</h2>
+            <div class="img-container">
+                <img src="eniac.jpg" alt="ENIAC Computer">
+                <div class="caption">The ENIAC, one of the first general-purpose electronic computers.</div>
+            </div>
+            <p>The transformation of American society through computers and digital technology is one of the most important stories of the modern era. From early ideas about networked computing to the creation of the global internet, digital systems reshaped communication, education, politics, and daily life. This website explores how digital technology sparked a revolution, how people and governments reacted to opportunities and challenges, and how reforms were enacted to guide technology's growth. The narrative draws on primary documents such as government archives and executive orders, and secondary analyses from historians, journalists, and technology scholars.</p>
+            
+            <h3>The NHD Theme</h3>
+            <p>This project argues that the digital revolution, met with both public enthusiasm and institutional caution, ultimately necessitated and was shaped by a series of critical federal reforms that secured systems, managed procurement, and democratized access. Computers sparked a revolution by changing communication, business, education, and government. People and institutions reacted with excitement, fear, and confusion as technology changed rapidly. Eventually, the government passed reforms such as the Computer Security Act and the Telecommunications Act to manage new challenges and opportunities. This website examines all three stages in detail.</p>
+        </div>
+
+        <div id="revolution" class="page-content">
+            <h2>Revolution</h2>
+            
+            <h3>Origins of the Internet and ARPANET</h3>
+            <div class="img-container">
+                <img src="arpanet.jpg" alt="ARPANET Map">
+                <div class="caption">A logical map of the ARPANET system, the precursor to the internet.</div>
+            </div>
+            <p>The roots of the digital revolution reach back to the visionary ideas of early pioneers like J.C.R. Licklider, who imagined a globally interconnected set of computers long before the technology existed. ARPANET—the first practical packet-switched computer network—was built in the late 1960s and became the basis for modern internet architecture. On October 29, 1969, Dr. Leonard Kleinrock and his colleagues sent the first message over ARPANET. Kleinrock later described how the first transmitted characters were only "lo" before the system crashed, but that minor glitch signaled the beginning of a new era. This breakthrough demonstrated that machines could communicate over distance, fundamentally altering the role of computers from isolated calculators to networked tools.</p>
+            
+            <h3>Personal Computers and Global Impact</h3>
+            <div class="img-container">
+                <img src="ibm_pc.jpg" alt="IBM PC 5150">
+                <div class="caption">The IBM PC 5150, which helped bring computing into the home.</div>
+            </div>
+            <p>Parallel to the development of networks, a hardware revolution was democratizing computing power. Computers evolved from room-sized machines to personal devices, driven by foundational innovations like the microprocessor. The Intel 4004 chip, co-inventor Stan Mazor noted, took years for engineers to understand, but it ultimately reformed everything from personal computers to advanced medical systems. The 1981 IBM PC was a pivotal reform in business strategy, as IBM broke tradition by selling through retail stores and using open architecture, which created a booming market for both hardware and software clones. This shift made computers a "pivotal tool" for businesses and homes. The revolution reached its mobile zenith in 2007 when Apple introduced the iPhone, integrating a phone, iPod, and internet communicator into one multi-touch device. This reform of the phone itself forced the entire industry to accelerate, reshaping global communication and creating the app-based economy we know today.</p>
+        </div>
+
+        <div id="reaction" class="page-content">
+            <h2>Reaction</h2>
+            
+            <h3>Institutional Reactions and Security Concerns</h3>
+            <div class="img-container">
+                <img src="security.jpg" alt="Cyber Security">
+                <div class="caption">The rise of digital data led to new concerns regarding online privacy and security.</div>
+            </div>
+            <p>The rapid spread of digital technology triggered significant reactions. As networks expanded, early adopters worried about privacy and security. Dr. Kleinrock recorded that some early computer sites refused to allow any traffic from the network to use their hosts, revealing a fundamental worry about the new technology. As computers became more central to infrastructure, governments and organizations grew concerned about unauthorized access, data breaches, and system vulnerabilities, necessitating structured responses to secure sensitive data.</p>
+            
+            <h3>Societal and Economic Reactions</h3>
+            <div class="img-container">
+                <img src="netday.jpg" alt="Volunteers wiring a school for the internet">
+                <div class="caption">President Clinton and Vice President Gore Participate in NetDay April 19, 1997.</div>
+            </div>
+            <p>Public reaction to the digital revolution was a mix of enthusiastic adoption and concerned caution. In education, there was a urgent push to bridge the "digital divide." Grassroots movements like NetDay 1996 saw thousands of community volunteers react by physically wiring their local schools for internet access, an effort championed by President Clinton. This reflected a societal consensus that technology access was crucial for future success. Conversely, the new connectivity spawned novel threats. Cybercrime—including ransomware, phishing, and fraud—emerged, causing significant economic damage and prompting the creation of new government roles and specialized units, like those in Homeland Security Investigations (HSI), to react to these digital-age crimes. The market also reacted swiftly; the first SMS text message in 1992 was a simple technical test, but as society reformed its communication habits, texting spawned a multi-billion dollar industry by the early 2000s.</p>
+        </div>
+
+        <div id="reform" class="page-content">
+            <h2>Reform</h2>
+
+            <h3>Legislative and Policy Reforms</h3>
+            <p>As the federal government became dependent on computers, systemic vulnerabilities demanded legislative reform. The <strong>Computer Security Act of 1987</strong> was a direct reaction to security flaws. Congress declared that "improving the security and privacy of sensitive information in Federal computer systems is in the public interest". The law designated the National Bureau of Standards to create security standards and mandated training for federal employees, marking a foundational reform to secure digitized data. By the mid-1990s, the government's outdated approach to buying and managing technology was causing expensive failures. In reaction, the <strong>Clinger-Cohen Act of 1996</strong> reformed procurement, requiring agencies to appoint Chief Information Officers (CIOs) and tie IT investments to measurable performance improvements, fundamentally changing how the government managed its technological transformation.</p>
+            
+            <h3>Reforms for Innovation and Access</h3>
+            <div class="img-container">
+                <img src="clinton.jpg" alt="President Clinton signing Act">
+                <div class="caption">President Bill Clinton signing the Telecommunications Act of 1996.</div>
+            </div>
+            <p>Beyond securing systems, government reforms actively aimed to spur innovation and ensure equitable access. The <strong>High-Performance Computing Act of 1991</strong> funded supercomputers and the nascent NSFNET, a key reform that accelerated the development of the public internet backbone. The most sweeping reform was the <strong>Telecommunications Act of 1996</strong>, which aimed to lower prices and increase competition. A cornerstone of this act was the <strong>E-Rate program</strong>, which provided billions in discounts to connect schools and libraries to the internet—a monumental reform to close the digital divide in education. Complementing this, <strong>Executive Order 12999</strong> (1996) made it easier for schools to receive surplus federal computers, directly putting technology into classrooms. The order stated its purpose was to "ensure that American children have the skills they need to succeed in the information-intensive 21st century" by making modern computer technology an integral part of every classroom. Together, these reforms shaped the landscape of the digital age, guiding the revolution toward broader public benefit.</p>
+        </div>
+
+        <div id="bib" class="page-content">
+            <h2>Bibliography</h2>
+            
+            <div class="bib-section">
+                <h3>Primary Sources</h3>
+                <div class="bib-entry">Congress. "H.R.145 - 100th Congress (1987-1988): Computer Security Act of 1987." Congress.gov, 2019.</div>
+                <div class="bib-entry">CERN. "A Short History of the Web." Home.cern, CERN, 2019.</div>
+                <div class="bib-entry">Apple Inc. "Apple Reinvents the Phone with IPhone." Apple Newsroom, 9 Jan. 2007.</div>
+                <div class="bib-entry">Kleinrock, Leonard. "The First Message Transmission." Www.icann.org, 29 Oct. 2019.</div>
+                <div class="bib-entry">U.S. Immigration and Customs Enforcement. "Cybercrime." ICE, 2025.</div>
+                <div class="bib-entry">"Technology Access and Innovation." Clintonwhitehouse4.Archives.gov.</div>
+                <div class="bib-entry">"Radio Address for NetDay." Archives.gov, 2026.</div>
+                <div class="bib-entry">"Executive Order 12999." Archives.gov, 2024.</div>
+                <div class="bib-entry">"Technology Access and Innovation (Collection)." Clintonwhitehouse4.Archives.gov.</div>
+                <div class="bib-entry">"Telecommunications Act Summary." Clintonwhitehouse4.Archives.gov.</div>
+                <div class="bib-entry">U.S. Congress. "Computer Security Act of 1987, Public Law 100-235." 1988.</div>
+                <div class="bib-entry">President William J. Clinton. "Executive Order 12999—Educational Technology: Ensuring Opportunity for All Children in the Next Century." April 17, 1996.</div>
+                <div class="bib-entry">United States Code. "Title 40, Subtitle III - Information Technology Management (Clinger-Cohen Act)."</div>
+            </div>
+
+            <div class="bib-section">
+                <h3>Secondary Sources</h3>
+                <div class="bib-entry">"How Has Technology Changed Education?" Purdue University College of Education, 2024.</div>
+                <div class="bib-entry">History.com Editors. "Invention of the PC." HISTORY, 11 May 2011.</div>
+                <div class="bib-entry">"The Chip That Changed the World." Newsroom, 17 Dec. 2024.</div>
+                <div class="bib-entry">History.com Editors. "First SMS Text Message Is Sent." HISTORY, 4 Oct. 2022.</div>
+                <div class="bib-entry">IBM. "The IBM PC." IBM, 2024.</div>
+                <div class="bib-entry">Tripwire. "A Look at the Computer Security Act of 1987." 1 Dec. 2020.</div>
+                <div class="bib-entry">Digital Policy Guide. "Clinger-Cohen Act of 1996." 12 May 2025.</div>
+                <div class="bib-entry">Gregersen, Erik. "Leonard Kleinrock." Encyclopedia Britannica, 2012.</div>
+                <div class="bib-entry">Vartabedian, Ralph. "U.S. Mounts High-Stakes Computer Reform Effort." LA Times, 1996.</div>
+                <div class="bib-entry">Internet Society. "Brief History of the Internet." 1997.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Revolution • Reaction • Reform | NHD Project 2026</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            document.getElementById('btn-' + pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
